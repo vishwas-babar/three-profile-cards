@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body,html{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #e65b5b, #4c3e3e);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+section .cards-container{
+    display: flex;
+}
+
+.cards-container{
+    display: flex;
+    column-gap: 15px;
+}
+
+.card{
+    height: 220px;
+    width: 200px;
+    border-radius: 10px;    
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px black;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-insider-container{
+    transform: rotateY(180deg);
+}
+
+.card .card-insider-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.8s;
+    position:relative;
+}
+
+.front{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    
+}
+
+.back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform:rotateY(180deg);
+    perspective: 1000px;
+}
+
+.card:hover .front{
+    
+}
+
+.profile-image-container img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.card .profile-image-container{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 2px;
+    border: 3px solid rgb(0, 132, 255);
+}
+
+.card h3{
+    font-weight: 400;
+    margin-top: 10px;
+}
+.card h4{
+    font-weight: 300;
+    color: rgb(94, 94, 198);
+}
+
+.star-container{
+    display: flex;
+}
+
